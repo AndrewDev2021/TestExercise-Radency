@@ -45,8 +45,6 @@ class Recalculation
 
         var sortArray = listOfTurple.OrderBy(p => p.Item2).Select(p => p.Item1).ToArray();
 
-        var output = string.Join(' ', sortArray);
-
-        return output;
+        return string.Join(' ', sortArray);
     }
 }
