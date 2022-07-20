@@ -12,25 +12,15 @@ class Recalculation
     {
         var temp = input.Split(' ');
 
-        var listOfValue = new List<string>();
-
-        foreach (var item in temp)
-        {
-            if (item != "")
-            {
-                listOfValue.Add(item);
-            }   
-        }
+        var list = temp.Select(p => p).Where(p => p != "").ToList();
 
         var listOfTuples = new List<Tuple<string, int>>();
 
-        foreach (var item in listOfValue)
+        foreach (var item in list)
         {
-            var temp2 = item.ToCharArray();
-
             var temp3 = 0;
 
-            foreach (var item2 in temp2)
+            foreach (var item2 in item.ToCharArray())
             {
                 var flag = int.TryParse(item2.ToString(), out int res);
 
