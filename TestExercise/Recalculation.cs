@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace TestExercise;
 
-class Recalculation
+internal class Recalculation
 {
     public string Order(string input)
     {
-        var temp = input.Split(' ');
-
-        var list = temp.Select(p => p).Where(p => p != "").ToList();
+        var tempList = input.Split(' ').Where(p => p != "").ToList();
 
         var listOfTuples = new List<Tuple<string, int>>();
 
-        foreach (var item in list)
+        foreach (var item in tempList)
         {
             var temp3 = 0;
 
