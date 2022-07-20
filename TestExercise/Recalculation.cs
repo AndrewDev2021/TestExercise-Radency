@@ -22,13 +22,13 @@ class Recalculation
             }   
         }
 
-        var listOfTurple = new List<Tuple<string, int>>();
+        var listOfTuples = new List<Tuple<string, int>>();
 
         foreach (var item in listOfValue)
         {
             var temp2 = item.ToCharArray();
 
-            int temp3 = 0;
+            var temp3 = 0;
 
             foreach (var item2 in temp2)
             {
@@ -40,10 +40,10 @@ class Recalculation
                     return "invalid data";
             }
 
-            listOfTurple.Add(new Tuple<string, int>(item,temp3));
+            listOfTuples.Add(new Tuple<string, int>(item,temp3));
         }
 
-        var sortArray = listOfTurple.OrderBy(p => p.Item2).Select(p => p.Item1).ToArray();
+        var sortArray = listOfTuples.OrderBy(p => p.Item2).Select(p => p.Item1).ToArray();
 
         return string.Join(' ', sortArray);
     }
