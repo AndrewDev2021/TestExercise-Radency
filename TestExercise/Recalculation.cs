@@ -65,4 +65,3 @@ internal class Recalculation
         (e1, e2) = (e2, e1);
     }
 }
-    
